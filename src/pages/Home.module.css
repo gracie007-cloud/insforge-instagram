@@ -1,0 +1,106 @@
+.home {
+  padding: 20px 0;
+}
+
+.content {
+  max-width: 975px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 30px;
+}
+
+.mainColumn {
+  max-width: 614px;
+}
+
+.posts {
+  margin-top: 24px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+}
+
+.error button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.noPosts {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+}
+
+.noPosts p:first-child {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+}
+
+.suggestions {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.suggestions h3 {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.placeholder {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    display: none;
+  }
+  
+  .mainColumn {
+    max-width: 100%;
+  }
+}
